@@ -7,6 +7,8 @@ try:
     import pyopenjtalk
 
     current_file_path = os.path.dirname(__file__)
+    # 设置资源目录路径
+    resource_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "resource", "tts")
 
     # 防止win下无法读取模型
     if os.name == "nt":
@@ -35,17 +37,20 @@ try:
             if current_file_path[: len(python_dir)].upper() == python_dir.upper():
                 current_file_path = os.path.join(os.path.relpath(current_file_path, python_dir))
             else:
-                if not os.path.exists("TEMP"):
-                    os.mkdir("TEMP")
-                if not os.path.exists(os.path.join("TEMP", "ja")):
-                    os.mkdir(os.path.join("TEMP", "ja"))
-                if not os.path.exists(os.path.join("TEMP", "ja", "ja_userdic")):
-                    os.mkdir(os.path.join("TEMP", "ja", "ja_userdic"))
-                    shutil.copyfile(
-                        os.path.join(current_file_path, "ja_userdic", "userdict.csv"),
-                        os.path.join("TEMP", "ja", "ja_userdic", "userdict.csv"),
-                    )
-                current_file_path = os.path.join("TEMP", "ja")
+                # 确保resource/tts目录存在
+                if not os.path.exists(resource_dir):
+                    os.makedirs(resource_dir)
+                if not os.path.exists(os.path.join(resource_dir, "ja_userdic")):
+                    os.makedirs(os.path.join(resource_dir, "ja_userdic"))
+
+                current_file_path = resource_dir
+        else:
+            if not os.path.exists(resource_dir):
+                os.makedirs(resource_dir)
+            if not os.path.exists(os.path.join(resource_dir, "ja_userdic")):
+                os.makedirs(os.path.join(resource_dir, "ja_userdic"))
+
+            current_file_path = resource_dir
 
     def get_hash(fp: str) -> str:
         hash_md5 = hashlib.md5()

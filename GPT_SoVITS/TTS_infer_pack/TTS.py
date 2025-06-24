@@ -220,55 +220,55 @@ class TTS_Config:
             "device": "cpu",
             "is_half": False,
             "version": "v1",
-            "t2s_weights_path": "GPT_SoVITS/pretrained_models/s1bert25hz-2kh-longer-epoch=68e-step=50232.ckpt",
-            "vits_weights_path": "GPT_SoVITS/pretrained_models/s2G488k.pth",
-            "cnhuhbert_base_path": "GPT_SoVITS/pretrained_models/chinese-hubert-base",
-            "bert_base_path": "GPT_SoVITS/pretrained_models/chinese-roberta-wwm-ext-large",
+            "t2s_weights_path": "resource/tts/pretrained_models/s1bert25hz-2kh-longer-epoch=68e-step=50232.ckpt",
+            "vits_weights_path": "resource/tts/pretrained_models/s2G488k.pth",
+            "cnhuhbert_base_path": "resource/tts/pretrained_models/chinese-hubert-base",
+            "bert_base_path": "resource/tts/pretrained_models/chinese-roberta-wwm-ext-large",
         },
         "v2": {
             "device": "cpu",
             "is_half": False,
             "version": "v2",
-            "t2s_weights_path": "GPT_SoVITS/pretrained_models/gsv-v2final-pretrained/s1bert25hz-5kh-longer-epoch=12-step=369668.ckpt",
-            "vits_weights_path": "GPT_SoVITS/pretrained_models/gsv-v2final-pretrained/s2G2333k.pth",
-            "cnhuhbert_base_path": "GPT_SoVITS/pretrained_models/chinese-hubert-base",
-            "bert_base_path": "GPT_SoVITS/pretrained_models/chinese-roberta-wwm-ext-large",
+            "t2s_weights_path": "resource/tts/pretrained_models/gsv-v2final-pretrained/s1bert25hz-5kh-longer-epoch=12-step=369668.ckpt",
+            "vits_weights_path": "resource/tts/pretrained_models/gsv-v2final-pretrained/s2G2333k.pth",
+            "cnhuhbert_base_path": "resource/tts/pretrained_models/chinese-hubert-base",
+            "bert_base_path": "resource/tts/pretrained_models/chinese-roberta-wwm-ext-large",
         },
         "v3": {
             "device": "cpu",
             "is_half": False,
             "version": "v3",
-            "t2s_weights_path": "GPT_SoVITS/pretrained_models/s1v3.ckpt",
-            "vits_weights_path": "GPT_SoVITS/pretrained_models/s2Gv3.pth",
-            "cnhuhbert_base_path": "GPT_SoVITS/pretrained_models/chinese-hubert-base",
-            "bert_base_path": "GPT_SoVITS/pretrained_models/chinese-roberta-wwm-ext-large",
+            "t2s_weights_path": "resource/tts/pretrained_models/s1v3.ckpt",
+            "vits_weights_path": "resource/tts/pretrained_models/s2Gv3.pth",
+            "cnhuhbert_base_path": "resource/tts/pretrained_models/chinese-hubert-base",
+            "bert_base_path": "resource/tts/pretrained_models/chinese-roberta-wwm-ext-large",
         },
         "v4": {
             "device": "cpu",
             "is_half": False,
             "version": "v4",
-            "t2s_weights_path": "GPT_SoVITS/pretrained_models/s1v3.ckpt",
-            "vits_weights_path": "GPT_SoVITS/pretrained_models/gsv-v4-pretrained/s2Gv4.pth",
-            "cnhuhbert_base_path": "GPT_SoVITS/pretrained_models/chinese-hubert-base",
-            "bert_base_path": "GPT_SoVITS/pretrained_models/chinese-roberta-wwm-ext-large",
+            "t2s_weights_path": "resource/tts/pretrained_models/s1v3.ckpt",
+            "vits_weights_path": "resource/tts/pretrained_models/gsv-v4-pretrained/s2Gv4.pth",
+            "cnhuhbert_base_path": "resource/tts/pretrained_models/chinese-hubert-base",
+            "bert_base_path": "resource/tts/pretrained_models/chinese-roberta-wwm-ext-large",
         },
         "v2Pro": {
             "device": "cpu",
             "is_half": False,
             "version": "v2Pro",
-            "t2s_weights_path": "GPT_SoVITS/pretrained_models/s1v3.ckpt",
-            "vits_weights_path": "GPT_SoVITS/pretrained_models/v2Pro/s2Gv2Pro.pth",
-            "cnhuhbert_base_path": "GPT_SoVITS/pretrained_models/chinese-hubert-base",
-            "bert_base_path": "GPT_SoVITS/pretrained_models/chinese-roberta-wwm-ext-large",
+            "t2s_weights_path": "resource/tts/pretrained_models/s1v3.ckpt",
+            "vits_weights_path": "resource/tts/pretrained_models/v2Pro/s2Gv2Pro.pth",
+            "cnhuhbert_base_path": "resource/tts/pretrained_models/chinese-hubert-base",
+            "bert_base_path": "resource/tts/pretrained_models/chinese-roberta-wwm-ext-large",
         },
         "v2ProPlus": {
             "device": "cpu",
             "is_half": False,
             "version": "v2ProPlus",
-            "t2s_weights_path": "GPT_SoVITS/pretrained_models/s1v3.ckpt",
-            "vits_weights_path": "GPT_SoVITS/pretrained_models/v2Pro/s2Gv2ProPlus.pth",
-            "cnhuhbert_base_path": "GPT_SoVITS/pretrained_models/chinese-hubert-base",
-            "bert_base_path": "GPT_SoVITS/pretrained_models/chinese-roberta-wwm-ext-large",
+            "t2s_weights_path": "resource/tts/pretrained_models/s1v3.ckpt",
+            "vits_weights_path": "resource/tts/pretrained_models/v2Pro/s2Gv2ProPlus.pth",
+            "cnhuhbert_base_path": "resource/tts/pretrained_models/chinese-hubert-base",
+            "bert_base_path": "resource/tts/pretrained_models/chinese-roberta-wwm-ext-large",
         },
     }
     configs: dict = None
@@ -289,7 +289,7 @@ class TTS_Config:
 
     def __init__(self, configs: Union[dict, str] = None):
         # 设置默认配置文件路径
-        configs_base_path: str = "GPT_SoVITS/configs/"
+        configs_base_path: str = "resource/tts/configs/"
         os.makedirs(configs_base_path, exist_ok=True)
         self.configs_path: str = os.path.join(configs_base_path, "tts_infer.yaml")
 
@@ -304,7 +304,7 @@ class TTS_Config:
             configs: dict = self._load_configs(self.configs_path)
 
         assert isinstance(configs, dict)
-        version = configs.get("version", "v2").lower()
+        version = configs.get("version", "v4").lower()
         assert version in ["v1", "v2", "v3", "v4", "v2Pro", "v2ProPlus"]
         self.default_configs[version] = configs.get(version, self.default_configs[version])
         self.configs: dict = configs.get("custom", deepcopy(self.default_configs[version]))
@@ -602,7 +602,7 @@ class TTS:
                 self.empty_cache()
 
             self.vocoder = BigVGAN.from_pretrained(
-                "%s/GPT_SoVITS/pretrained_models/models--nvidia--bigvgan_v2_24khz_100band_256x" % (now_dir,),
+                "%s/resource/tts/pretrained_models/models--nvidia--bigvgan_v2_24khz_100band_256x" % (now_dir,),
                 use_cuda_kernel=False,
             )  # if True, RuntimeError: Ninja is required to load C++ extensions
             # remove weight norm in the model and set to eval mode
@@ -635,7 +635,7 @@ class TTS:
             )
             self.vocoder.remove_weight_norm()
             state_dict_g = torch.load(
-                "%s/GPT_SoVITS/pretrained_models/gsv-v4-pretrained/vocoder.pth" % (now_dir,),
+                "%s/resource/tts/pretrained_models/gsv-v4-pretrained/vocoder.pth" % (now_dir,),
                 map_location="cpu",
                 weights_only=False,
             )
