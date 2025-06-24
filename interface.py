@@ -13,9 +13,18 @@ from io import BytesIO
 from GPT_SoVITS.TTS_infer_pack.TTS import TTS, TTS_Config
 
 
-tts_config = TTS_Config("resource/tts/configs/tts_infer.yaml")
-print(tts_config)
-tts_pipeline = TTS(tts_config)
+_tts_pipeline: TTS | None = None
+_tts_config: TTS_Config | None = None
+
+def get_tts_pipeline():
+    global _tts_pipeline, _tts_config
+
+    if _tts_pipeline is None:
+        _tts_config = TTS_Config("resource/tts/configs/tts_infer.yaml")
+        print(_tts_config)
+        _tts_pipeline = TTS(_tts_config)
+    
+    return _tts_pipeline
 
 
 def pack_wav(io_buffer: BytesIO, data: np.ndarray, rate: int):
@@ -114,6 +123,7 @@ def tts_handle(req: dict):
     if streaming_mode or return_fragment:
         req["return_fragment"] = True
 
+    tts_pipeline = get_tts_pipeline()
     tts_generator = tts_pipeline.run(req)
     sr, audio_data = next(tts_generator)
     audio_data = pack_audio(BytesIO(), audio_data, sr, media_type).getvalue()
