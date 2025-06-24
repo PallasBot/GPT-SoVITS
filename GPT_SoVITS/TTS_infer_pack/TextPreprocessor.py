@@ -4,7 +4,7 @@ import threading
 
 from tqdm import tqdm
 
-now_dir = os.getcwd()
+now_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(now_dir)
 
 import re

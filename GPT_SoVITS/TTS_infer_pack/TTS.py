@@ -10,8 +10,9 @@ from copy import deepcopy
 import torchaudio
 from tqdm import tqdm
 
+file_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(file_dir)
 now_dir = os.getcwd()
-sys.path.append(now_dir)
 import os
 from typing import List, Tuple, Union
 
